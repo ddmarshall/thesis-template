@@ -69,6 +69,9 @@
 \subsection{Representing Vectors}
     Vectors are represented a variety of ways in different fields of study.
     A few of the most common methods are presented here.
+    \textbf{
+    For theses with Dr. Marshall, bold symbols is how vectors should be represented as in \cref{sec:VectorsBoldSymbols}.
+    }
 
 \subsubsection{Vectors as Bold Symbols}\label{sec:VectorsBoldSymbols}
     A three-dimensional vector has the form
@@ -160,6 +163,19 @@
     If your thesis has no figures, then the list of figures should be removed from the thesis.
     This is accomplished by removing the code in listings.tex associated with the list of figures.
 
+    \textbf{
+    Additional requirements for Dr. Marshall.
+    The figure captions should be no wider than the figure itself.
+    This can be accomplished by using the \textbackslash captionsetup command.
+    See the \LaTeX\ for this section to see how this is accomplished.
+    Another related change is that the second and subsequent lines of caption text are not indented like they are in the general template.
+    There is nothing that needs to be done by the user for this indention change.
+    The third change to the captions is that the last sentence in the caption \emph{should not} end with a period.
+    This is so that the list of tables/figures can add an appropriately spaced period.
+    The caption package will also put a period at the end of the caption under the figure.
+    See the examples throughout this document.
+    }
+
 \subsection{Figures from Images} \label{sec:FiguresFromImages}
     Image files can be inserted using the \textbackslash includegraphics command.
     \Cref{fig:CalPolySeal1} shows the import of a JPG file at its original size.
@@ -247,6 +263,19 @@
     Tables are handled similarly to figures within \LaTeX.
     If your thesis has no tables, then the list of tables should be removed from the thesis.
     This is accomplished by removing the code in listings.tex associated with the list of tables.
+
+    \textbf{
+    Additional requirements for Dr. Marshall.
+    The table captions should be no wider than the table itself.
+    This can be accomplished by using the \textbackslash captionsetup command.
+    See the \LaTeX\ for this section to see how this is accomplished.
+    Another related change is that the second and subsequent lines of caption text are not indented like they are in the general template.
+    There is nothing that needs to be done by the user for this indention change.
+    The third change to the captions is that the last sentence in the caption \emph{should not} end with a period.
+    This is so that the list of tables/figures can add an appropriately spaced period.
+    The caption package will also put a period at the end of the caption under the figure.
+    See the examples throughout this document.
+    }
 
     One exception is that the caption for a table should be above the table, while the caption for figures should be below the figure.
     Table~\ref{tab:fancy-table-example} shows a floating table with a variety of column types.
@@ -349,7 +378,13 @@
 
 \section{Nomenclature Usage} \label{sec:NomenclatureUsage}
     The \nameref{sec:Nomenclature} in the preamble on \cpageref{sec:Nomenclature} shows the nomenclature for this document.
-    This uses the nomencl package, and you should consult the documentation for that package to see how it can be customized.
+    This uses the nomencl package, and you should consult the documentation for that package to see how it can be used.
+    \textbf{
+    For theses under Dr. Marshall, the nomenclature has a different setup than the default thesis.
+    There are five separate categories that the nomenclature is sorted into.
+    Each category is then sorted alphabetically, with Greek letter preceding Latin letters.
+    See the comments and implementation in the nomenclature.tex file for details.
+    }
     The simplest way to implement the nomenclature/list of symbols information is how this document has created the nomenclature.
     All of the nomenclature information is contained within the nomenclature.tex file in the frontmatter directory.
     If no nomenclature is desired, then simply remove all of the content in this file and remove the list of symbols code in the listings.tex file.
