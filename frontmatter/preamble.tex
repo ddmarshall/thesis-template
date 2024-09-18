@@ -17,10 +17,26 @@
 % based on Overleaf documentation
 % https://www.overleaf.com/learn/latex/Nomenclatures
 \usepackage{etoolbox}
+
+% reduce spacing for nomenclature items
+% https://tex.stackexchange.com/a/283593
+\newlength{\nomitemorigsep}
+\setlength{\nomitemorigsep}{\nomitemsep}
+\setlength{\nomitemsep}{-\parsep}
 \renewcommand\nomgroup[1]{%
+    \itemsep\nomitemorigsep%
     \item[\bfseries
-        \ifstrequal{#1}{P}{Physics constants}{%
-        \ifstrequal{#1}{N}{Number sets}{%
-        \ifstrequal{#1}{O}{Other symbols}{}}}%
+        \ifstrequal{#1}{A}{Acronyms}{%
+        \ifstrequal{#1}{L}{Latin Symbols}{%
+        \ifstrequal{#1}{G}{Greek symbols}{%
+        \ifstrequal{#1}{S}{Subscripts}{%
+        \ifstrequal{#1}{N}{Superscripts}{
+        Other Symbols}}}}}%
     ]
+    \itemsep\nomitemsep
 }
+
+\newcommand{\rectangle}{{%
+  \ooalign{$\sqsubset\mkern2mu$\cr$\mkern1mu\sqsupset$\cr}%
+}}
+
