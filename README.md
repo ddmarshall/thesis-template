@@ -136,7 +136,6 @@ The other informational files are located in the ```guidelines``` directory.
 These files are copies of guidelines published on the [Graduate Education website](https://grad.calpoly.edu/masters-thesis/masters-thesis.html).
 We try to keep these files up-to-date, but the canonical versions of these files reside on the Graduate Education website.
 
-
 ## TL;DR
 Most files have examples on how they should be used inside of them. Here is a handy checklist which outlines what you need to do to start writing (besides overcoming the overwhelming mountain of things you'd rather be doing).
 
@@ -152,6 +151,7 @@ Most files have examples on how they should be used inside of them. Here is a ha
 
 # Overleaf
 Want to take your thesis writing ***to the cloud?!?!*** Or, you know, don't want to install the ~3GB girthy monstrosity that is LaTeX on your pristine machine? Use [Overleaf](https://www.overleaf.com/).
+Even better, use [this template](https://www.overleaf.com/latex/templates/cal-poly-thesis-template/vvqzkxgchkvc) on Overleaf.
 
 # Questions or Bugs?
 If you have a general question about LaTeX, there are a lot of resources on the internet that can help.
