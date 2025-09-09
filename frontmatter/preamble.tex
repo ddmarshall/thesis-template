@@ -21,8 +21,10 @@
 \usepackage{etoolbox}
 \renewcommand\nomgroup[1]{%
     \item[%
-        \ifstrequal{#1}{P}{Physics Constants}{%
-        \ifstrequal{#1}{N}{Number Sets}{%
-        \ifstrequal{#1}{O}{Other Symbols}{}}}%
+        \ifstrequal{#1}{L}{Latin Symbols}{%
+        \ifstrequal{#1}{G}{Greek Symbols}{%
+        \ifstrequal{#1}{S}{Subscripts}{%
+        \ifstrequal{#1}{N}{Superscripts}%
+        {Other Symbols}}}}%
     ]\bigskip
 }
