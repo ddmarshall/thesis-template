@@ -9,6 +9,17 @@ There are plenty of examples on how to create typical thesis content (equations,
 A word of caution about making changes to the formatting associated with this template.
 There are opportunities to customize the format or look of certain aspects of your thesis, but you need to be careful that the formatting changes you make are consistent with the formatting guidelines from the Graduate Education department.
 
+## Changes From the Default Template
+While the format of the default template is satisfactory, there are some stylistic preferences that I am adding. These changes are:
+
+- Added the ```siunitx``` package. This package needs to be used whenever formatting numbers, especially in tables, and when using units.
+See the [siunitx documentation](https://ctan.org/pkg/siunitx) and Chapter 1 of the thesis template for examples on how to use that package.
+- Changed captions to **not** indent second and following lines on the left.
+- Captions of figures and tables should be the same width as the corresponding figure or table.
+Every figure and table in the thesis template have been updated to limit the width using the ```\captionsetup``` command.
+- Changed the nomenclature to sort by superscript, subscript, Latin, and Greek letter.
+See the ```nomenclature.tex``` file for this change.
+
 # How to Use
 Overall, the project is split into three types of files: those that are intended to be modified, those that probably do not need to be modified, and those that are informational.
 Making changes to the first type of files should have no impact on the overall format of your thesis, while modifying the second type of files could have an impact on the thesis format.
