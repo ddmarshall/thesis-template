@@ -250,22 +250,33 @@
 
     One exception is that the caption for a table should be above the table, while the caption for figures should be below the figure.
     Table~\ref{tab:fancy-table-example} shows a floating table with a variety of column types.
-    The formatting for these columns (such as aligning floating point numbers on the decimal, scientific notation, and unit labels) can be accomplished using the siunitx package, however that is beyond the scope of this introduction.
+    \textbf{
+    The formatting for these columns (such as aligning floating point numbers on the decimal, scientific notation, and unit labels) is accomplished using the siunitx package.
+    This package must be used for theses under Dr. Marshall.
+    }
     \begin{table}
         \centering
-        \begin{tabular}{c l l l l}
-                      & \multicolumn{1}{c}{Ref.}& \multicolumn{1}{c}{Calc.}& \multicolumn{1}{c}{Absolute}& \multicolumn{1}{c}{Relative} \\
-            Parameter & \multicolumn{1}{c}{Value}& \multicolumn{1}{c}{Value}& \multicolumn{1}{c}{Difference}& \multicolumn{1}{c}{Difference (\%)} \\
+        \begin{tabular}{c S S S S}
+                      & \multicolumn{1}{c}{Ref.}
+                               & \multicolumn{1}{c}{Calc.}
+                                        & \multicolumn{1}{c}{Absolute}
+                                                    & \multicolumn{1}{c}{Relative} \\
+            Parameter & \multicolumn{1}{c}{Value}
+                               & \multicolumn{1}{c}{Value}
+                                        & \multicolumn{1}{c}{Difference}
+                                                    & \multicolumn{1}{c}{Difference (\%)} \\
             \hline
-            Radius & 150.0 & 150.0 & $\phantom{-}0.000\times 10^{0}$ & \quad\quad 0.0 \\
-            Chord & \phantom{1}60.00 & \phantom{1}60.00 & $\phantom{-}0.000\times 10^{0}$ & \quad\quad 0.0 \\
-            Thickness & \phantom{15}6.000 & \phantom{15}6.061 & $\phantom{-}6.123\times 10^{-2}$ & \quad\quad 1.021 \\
-            $\theta_\text{l.e.}\ \left(^\circ\right)$ & \phantom{1}11.33 & \phantom{1}11.54 & $\phantom{-}2.036\times 10^{-1}$ & \quad\quad 1.797 \\
-            $\theta_\text{t.e.}\ \left(^\circ\right)$ & \,-11.33 & \,-11.54 & $-2.036\times 10^{-1}$ & \quad\quad 1.797 \\
+            Radius    & 150.0  & 150.0  & 0.0e0     & 0.0 \\
+            Chord     & 60.00  & 60.00  & 0.0e0     & 0.0 \\
+            Thickness & 6.000  & 6.061  & 6.123e-2  & 1.021 \\
+            $\theta_\text{l.e.}\ \left(\unit{\degree}\right)$
+                      & 11.33  & 11.54  & 2.036e-1  & 1.797 \\
+            $\theta_\text{t.e.}\ \left(\unit{\degree}\right)$
+                      & -11.33 & -11.54 & -2.036e-1 & 1.797 \\
             \hline
         \end{tabular}
         \captionsetup{width=5in}
-        \caption{The formatting of this table is hackish. There are better ways to align numbers. The siunitx package provides this feature}
+        \caption{The formatting of this table is done using the siunitx package. This package should be used for all units}
         \label{tab:fancy-table-example}
     \end{table}
 
@@ -289,8 +300,8 @@
             \label{tab:week1}
             \begin{tabular}{r r r}
                       & Min.  & Max. \\
-                Day   & $\left(^\circ\text{C}\right)$
-                              & $\left(^\circ\text{C}\right)$ \\
+                Day   & $\left(\unit{\degreeCelsius}\right)$
+                              & $\left(\unit{\degreeCelsius}\right)$ \\
                 \hline
                 Mon   & 13 & 20 \\
                 Tue   & 14 & 22 \\
@@ -309,8 +320,8 @@
             \centering
             \begin{tabular}{r r r}
                       & Min.  & Max. \\
-                Day   & $\left(^\circ\text{C}\right)$
-                              & $\left(^\circ\text{C}\right)$ \\
+                Day   & $\left(\unit{\degreeCelsius}\right)$
+                              & $\left(\unit{\degreeCelsius}\right)$ \\
                 \hline
                 Mon   & 11 & 17 \\
                 Tue   & 10 & 16 \\
